@@ -11,8 +11,8 @@ export default {
 
 const Template: Story<CardProps> = args => <Card {...args} />;
 
-export const Text = Template.bind({});
+export const Primary = Template.bind({});
 
-Text.args = {
+Primary.args = {
     children: <div>Card</div>,
 };

@@ -1,0 +1,8 @@
+.wrapper {
+    user-select: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: ghostwhite;
+    }
+}
