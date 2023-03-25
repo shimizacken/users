@@ -12,7 +12,12 @@ export default {
 const Template: Story<TextInputProps> = args => <TextInput {...args} />;
 
 export const Text = Template.bind({});
+export const Password = Template.bind({});
 
 Text.args = {
     type: 'text',
+};
+
+Password.args = {
+    type: 'password',
 };
