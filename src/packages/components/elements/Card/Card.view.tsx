@@ -5,9 +5,9 @@ export const Card: React.FC<React.PropsWithChildren> = ({
     children,
     ...props
 }) => (
-    <div className={styles.wrapper} {...props}>
+    <li className={styles.wrapper} {...props}>
         {children}
-    </div>
+    </li>
 );
 
 export type CardProps = React.ComponentProps<typeof Card>;
