@@ -69,6 +69,7 @@
     "prop-types": "^15.8.1",
     "react-docgen-typescript-plugin": "^1.0.5",
     "sass": "^1.60.0",
+    "typed-scss-modules": "^7.1.0",
     "typescript": "^5.0.2",
     "webpack": "^5.76.3"
   }
