@@ -4,7 +4,7 @@ import {useNavigate, useMatch} from 'react-router-dom';
 import {BackButton} from '../../packages/components';
 
 export const BackButtonContainer: React.FC = () => {
-    const match = useMatch('weather/:locationName');
+    const match = useMatch('user/:userId');
     const navigate = useNavigate();
 
     if (!match) {

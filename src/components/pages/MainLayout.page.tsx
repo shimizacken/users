@@ -12,7 +12,7 @@ export const MainLayout: React.FC = () => (
                     <Link to="/">Logo</Link>
                 </div>
             }
-            end={<div />}
+            end={<div>end</div>}
         />
         <main>
             <Routes>
