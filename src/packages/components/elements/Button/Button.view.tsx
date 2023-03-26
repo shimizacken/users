@@ -7,7 +7,7 @@ export const Button: React.FC<
     React.ComponentProps<'button'> &
         React.PropsWithChildren<{
             disabled?: boolean;
-            onClick?: () => void;
+            onClick?: React.MouseEventHandler<HTMLButtonElement>;
             buttonType?: ButtonType;
             noDesign?: boolean;
         }>

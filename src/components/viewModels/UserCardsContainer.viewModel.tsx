@@ -1,14 +1,13 @@
 import React, {useEffect, useState} from 'react';
-import {useNavigate} from 'react-router-dom';
 import {useUsersLoader} from '../../hooks/useUsersLoader';
 import {TextInput} from '../../packages/components';
 import {usersService} from '../../services/usersService';
-import {User} from '../../types/types';
-import {UserCard} from '../views/UserCard/UserCard.view';
+import {SortBy, User} from '../../types/types';
+import {sortCards, getCompareFn} from '../../utils/sortUserCards';
+import {SortButtons} from '../views/SortButtons/SortButtons.view';
 import {UserCards} from '../views/UserCards/UserCards.view';
 
 export const UserCardsContainer: React.FC = () => {
-    const navigate = useNavigate();
     const users = useUsersLoader();
     const [filteredUsers, setFilteredUsers] = useState<User[] | undefined>(
         users
@@ -17,7 +16,7 @@ export const UserCardsContainer: React.FC = () => {
     useEffect(() => {
         if (users) {
             usersService.setUsers(users);
-            setFilteredUsers(users);
+            setFilteredUsers(users?.sort(getCompareFn('name')));
         }
     }, [users]);
 
@@ -37,24 +36,30 @@ export const UserCardsContainer: React.FC = () => {
         }
     };
 
+    const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+        const value = e.currentTarget.value;
+
+        if (value === SortBy.UserName) {
+            setFilteredUsers(sortCards(SortBy.UserName, filteredUsers));
+        } else if (value === SortBy.CompanyName) {
+            setFilteredUsers(sortCards(SortBy.CompanyName, filteredUsers));
+        } else if (value === SortBy.CityName) {
+            setFilteredUsers(sortCards(SortBy.CityName, filteredUsers));
+        }
+    };
+
     return (
         <section>
             <section>
-                <TextInput
-                    onChange={onTextInputChange}
-                    placeholder="Type user name..."
-                />
-            </section>
-            <UserCards>
-                {filteredUsers?.map(user => (
-                    <UserCard
-                        key={user.id}
-                        name={user.name}
-                        company={user.company.name}
-                        onClick={() => navigate(`user/${user.id}`)}
+                <div>
+                    <TextInput
+                        onChange={onTextInputChange}
+                        placeholder="Type user name..."
                     />
-                ))}
-            </UserCards>
+                    <SortButtons onClick={onClick} />
+                </div>
+            </section>
+            <UserCards users={filteredUsers} />
         </section>
     );
 };
