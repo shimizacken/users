@@ -4,8 +4,15 @@ import {useUsersLoader} from '../../hooks/useUsersLoader';
 import {TextInput} from '../../packages/components';
 import {usersService} from '../../services/usersService';
 import {User} from '../../types/types';
+import {SortButtons} from '../views/SortButtons/SortButtons.view';
 import {UserCard} from '../views/UserCard/UserCard.view';
 import {UserCards} from '../views/UserCards/UserCards.view';
+
+enum SortBy {
+    UserName = 'user-name',
+    CompanyName = 'company-name',
+    CityName = 'city-name',
+}
 
 export const UserCardsContainer: React.FC = () => {
     const navigate = useNavigate();
@@ -37,13 +44,28 @@ export const UserCardsContainer: React.FC = () => {
         }
     };
 
+    const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+        const value = e.currentTarget.value;
+
+        if (value === SortBy.UserName) {
+            console.log('sort by UserName');
+        } else if (value === SortBy.CompanyName) {
+            console.log('sort by CompanyName');
+        } else if (value === SortBy.CityName) {
+            console.log('sort by CityName');
+        }
+    };
+
     return (
         <section>
             <section>
-                <TextInput
-                    onChange={onTextInputChange}
-                    placeholder="Type user name..."
-                />
+                <div>
+                    <TextInput
+                        onChange={onTextInputChange}
+                        placeholder="Type user name..."
+                    />
+                    <SortButtons onClick={onClick} />
+                </div>
             </section>
             <UserCards>
                 {filteredUsers?.map(user => (
