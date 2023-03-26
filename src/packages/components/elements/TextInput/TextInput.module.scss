@@ -1,5 +1,11 @@
 .textInput {
-    padding: 8px;
+    font-size: 16px;
+    padding: 16px;
     border: 1px solid gainsboro;
     border-radius: 8px;
+    outline: none;
+
+    &:focus {
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    }
 }
