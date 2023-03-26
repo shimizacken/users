@@ -5,14 +5,16 @@ export type TextInputType = 'text' | 'password';
 
 export const TextInput: React.FC<{
     type?: TextInputType;
-    value?: string;
+    onChange?: React.ChangeEventHandler<HTMLInputElement>;
     placeholder?: string;
-}> = ({type = 'text', placeholder = '', value, ...props}) => (
+    value?: string;
+}> = ({type = 'text', placeholder = '', onChange, value, ...props}) => (
     <input
         className={styles.textInput}
         type={type}
         value={value}
         placeholder={placeholder}
+        onChange={onChange}
         {...props}
     />
 );
