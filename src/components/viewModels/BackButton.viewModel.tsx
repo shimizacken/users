@@ -1,7 +1,7 @@
 import React from 'react';
 import {useNavigate, useMatch} from 'react-router-dom';
-// import {TestId} from '../../testId';
 import {BackButton} from '../../packages/components';
+import {TestId} from '../../testId';
 
 export const BackButtonContainer: React.FC = () => {
     const match = useMatch('user/:userId');
@@ -17,7 +17,7 @@ export const BackButtonContainer: React.FC = () => {
                 onClick={() => navigate('/')}
                 aria-label="Back to previous page"
                 title="Back to previous page"
-                // data-cy={TestId.BACK_BUTTON}
+                data-cy={TestId.BACK_BUTTON}
             />
         </nav>
     );
