@@ -29,7 +29,9 @@ export const UserCardsContainer: React.FC = () => {
 
         if (value.length > 2) {
             const filtered = users?.filter(user =>
-                user.name.toLocaleLowerCase().includes(e.target.value)
+                user.name
+                    .toLocaleLowerCase()
+                    .includes(e.target.value.toLocaleLowerCase())
             );
 
             setFilteredUsers(filtered);
