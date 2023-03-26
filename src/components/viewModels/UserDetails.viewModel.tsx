@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {useMatch} from 'react-router-dom';
+import {useMatch, useNavigate} from 'react-router-dom';
 import {usersService} from '../../services/usersService';
 import {UserTitle} from '../views/UserTitle/Title.view';
 import {User} from '../../types/types';
@@ -7,6 +7,7 @@ import {UserDetails} from '../views/UserDetails/UserDetails.view';
 
 export const UserDetailsContainer: React.FC = () => {
     const matches = useMatch('user/:userId');
+    const navigate = useNavigate();
     const [user, setUser] = useState<User>();
 
     useEffect(() => {
@@ -18,7 +19,11 @@ export const UserDetailsContainer: React.FC = () => {
         if (result) {
             setUser(result);
         }
-    }, [matches]);
+
+        if (!result) {
+            return navigate('/');
+        }
+    }, [matches, navigate]);
 
     if (!user) {
         return null;
