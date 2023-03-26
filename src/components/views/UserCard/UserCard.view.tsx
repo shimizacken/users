@@ -9,7 +9,7 @@ export const UserCard: React.FC<{
 }> = ({name, company, onClick}) => (
     <ClickableCard onClick={onClick}>
         <div className={styles.wrapper}>
-            <Heading headingTag="h3" className={styles.name}>
+            <Heading headingTag="h3" className={styles.name} title={name}>
                 {name}
             </Heading>
             <Text>{company}</Text>
