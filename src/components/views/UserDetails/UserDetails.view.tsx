@@ -61,3 +61,5 @@ export const UserDetails: React.FC<{user: User}> = ({user}) => (
         </section>
     </div>
 );
+
+export type UserDetailsProps = React.ComponentProps<typeof UserDetails>;
