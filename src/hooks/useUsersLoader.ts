@@ -7,8 +7,13 @@ export const useUsersLoader = () => {
     const [users, setUsers] = useState<User[]>();
 
     useEffect(() => {
-        request(GET_USERS_URL).then(u => {
-            setUsers(u);
+        request(GET_USERS_URL).then((u: User[]) => {
+            const enhanced = u.map(us => ({
+                ...us,
+                companyName: us.company.name,
+                cityName: us.address.city,
+            }));
+            setUsers(enhanced);
         });
     }, []);
 

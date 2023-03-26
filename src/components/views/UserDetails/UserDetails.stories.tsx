@@ -24,11 +24,13 @@ Primary.args = {
         email: user.email,
         phone: user.phone,
         website: user.website,
+        companyName: user.company.name,
         company: {
             name: user.company.name,
             catchPhrase: user.company.catchPhrase,
             bs: user.company.bs,
         },
+        cityName: user.address.city,
         address: {
             street: user.address.street,
             suite: user.address.suite,
