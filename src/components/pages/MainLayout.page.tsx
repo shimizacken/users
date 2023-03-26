@@ -3,7 +3,7 @@ import {Header, Footer} from '../../packages/components';
 import {Link, Route, Routes} from 'react-router-dom';
 import {BackButtonContainer} from '../viewModels/BackButton.viewModel';
 import {Dashboard} from './Dashboard.page';
-import {UserDetails} from './UserDetails.page';
+import {UserDetailsPage} from './UserDetails.page';
 
 export const MainLayout: React.FC = () => (
     <>
@@ -19,7 +19,11 @@ export const MainLayout: React.FC = () => (
         <main>
             <Routes>
                 <Route path="/" element={<Dashboard />} />
-                <Route index path="user/:userId" element={<UserDetails />} />
+                <Route
+                    index
+                    path="user/:userId"
+                    element={<UserDetailsPage />}
+                />
             </Routes>
         </main>
         <Footer />
