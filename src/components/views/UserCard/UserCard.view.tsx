@@ -1,5 +1,5 @@
 import React from 'react';
-import {ClickableCard} from '../../../packages/components';
+import {ClickableCard, Heading} from '../../../packages/components';
 import styles from './UserCard.module.scss';
 
 export const UserCard: React.FC<{name: string; company: string}> = ({
@@ -8,8 +8,10 @@ export const UserCard: React.FC<{name: string; company: string}> = ({
 }) => (
     <ClickableCard>
         <div className={styles.wrapper}>
-            <div><He{name}</div>
-            <div>Company: {company}</div>
+            <Heading headingTag="h3" className={styles.name}>
+                {name}
+            </Heading>
+            {company}
         </div>
     </ClickableCard>
 );
