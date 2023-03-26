@@ -3,7 +3,7 @@ import {action} from '@storybook/addon-actions';
 import {UserCard, UserCardProps} from './UserCard.view';
 
 export default {
-    title: 'Components/App/UserCard',
+    title: 'App/UserCard',
     component: UserCard,
     parameters: {
         layout: 'centered',

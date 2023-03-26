@@ -1,5 +1,5 @@
 import React from 'react';
-import {ClickableCard, Heading} from '../../../packages/components';
+import {ClickableCard, Heading, Text} from '../../../packages/components';
 import styles from './UserCard.module.scss';
 
 export const UserCard: React.FC<{
@@ -12,7 +12,7 @@ export const UserCard: React.FC<{
             <Heading headingTag="h3" className={styles.name}>
                 {name}
             </Heading>
-            {company}
+            <Text>{company}</Text>
         </div>
     </ClickableCard>
 );
