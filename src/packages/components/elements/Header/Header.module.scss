@@ -2,8 +2,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 50px;
+}
+
+.start {
+    justify-content: flex-start;
+}
+
+.center {
+    justify-content: center;
+}
+
+.end {
+    justify-content: flex-end;
 }
 
 .section {
+    display: flex;
     width: 33%;
 }
