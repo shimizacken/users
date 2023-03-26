@@ -1,6 +1,6 @@
-const compareFn = (a: {value: string}, b: {value: string}) => {
-    const nameA = a.value.toUpperCase();
-    const nameB = b.value.toUpperCase();
+const compareFn = (a: string, b: string) => {
+    const nameA = a.toUpperCase();
+    const nameB = b.toUpperCase();
     if (nameA < nameB) {
         return -1;
     }
@@ -8,9 +8,7 @@ const compareFn = (a: {value: string}, b: {value: string}) => {
         return 1;
     }
 
-    // names must be equal
     return 0;
 };
 
-export const sortByText = (values: Array<{value: string}>) =>
-    values.sort(compareFn);
+export const sortByText = (values: Array<string>) => values.sort(compareFn);

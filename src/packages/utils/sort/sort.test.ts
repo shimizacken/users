@@ -11,7 +11,7 @@ describe('sort test suite', () => {
     ];
 
     it('should return new neutron', () => {
-        const result = sortByText(values);
+        const result = sortByText(values.map(o => o.value));
 
         expect(result).toMatchSnapshot();
     });
