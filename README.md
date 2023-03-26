@@ -52,6 +52,7 @@ yarn storybook
     -   [x] jest
     -   [ ] cypress.io
 -   [ ] Translations
+-   [ ] Responsiveness
 -   [ ] Error handling
 -   [x] Deployment via netlify
     -   [ ] CI/CD
