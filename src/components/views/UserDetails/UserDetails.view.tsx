@@ -21,18 +21,42 @@ export const UserDetails: React.FC<{user: User}> = ({user}) => (
                 <Text weight="bold">Website:</Text> <Text>{user.website}</Text>
             </div>
         </section>
-        <section>
+        <section className={styles.wrapper}>
+            <Heading headingTag="h3">Company</Heading>
             <div>
-                <Heading headingTag="h3">Company</Heading>
                 <Text weight="bold">Name:</Text>{' '}
                 <Text>{user.company.name}</Text>
             </div>
-        </section>
-        <section>
             <div>
-                <Heading headingTag="h3">Address</Heading>
+                <Text weight="bold">Catch phrase:</Text>{' '}
+                <Text>{user.company.catchPhrase}</Text>
+            </div>
+            <div>
+                <Text weight="bold">BS:</Text> <Text>{user.company.bs}</Text>
+            </div>
+        </section>
+        <section className={styles.wrapper}>
+            <Heading headingTag="h3">Address</Heading>
+            <div>
                 <Text weight="bold">Street:</Text>{' '}
                 <Text>{user.address.street}</Text>
+            </div>
+            <div>
+                <Text weight="bold">Suite:</Text>{' '}
+                <Text>{user.address.suite}</Text>
+            </div>
+            <div>
+                <Text weight="bold">City:</Text>{' '}
+                <Text>{user.address.city}</Text>
+            </div>
+            <div>
+                <Text weight="bold">Zip code:</Text>{' '}
+                <Text>{user.address.zipcode}</Text>
+            </div>
+            <div>
+                <Text weight="bold">Geo:</Text>{' '}
+                <Text>{user.address.geo.lat}</Text>
+                <Text>{user.address.geo.lng}</Text>
             </div>
         </section>
     </div>
