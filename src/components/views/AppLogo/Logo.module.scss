@@ -1,0 +1,14 @@
+.logo {
+    width: 100px;
+}
+
+@media screen and (max-width: 600px) {
+    .logo {
+        width: 60px;
+    }
+}
+
+.mainWrapper {
+    display: flex;
+    justify-content: center;
+}
