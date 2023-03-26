@@ -1,10 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import {useUsersLoader} from '../../hooks/useUsersLoader';
-import {TextInput} from '../../packages/components';
 import {usersService} from '../../services/usersService';
 import {SortBy, User} from '../../types/types';
 import {sortCards, getCompareFn} from '../../utils/sortUserCards';
-import {SortButtons} from '../views/SortButtons/SortButtons.view';
+import {SortPanel} from '../views/SortPanel/SortPanel.view';
 import {UserCards} from '../views/UserCards/UserCards.view';
 
 export const UserCardsContainer: React.FC = () => {
@@ -27,7 +26,7 @@ export const UserCardsContainer: React.FC = () => {
             setFilteredUsers(users);
         }
 
-        if (value.length > 2) {
+        if (value.length >= 2) {
             const filtered = users?.filter(user =>
                 user.name
                     .toLocaleLowerCase()
@@ -53,13 +52,10 @@ export const UserCardsContainer: React.FC = () => {
     return (
         <section>
             <section>
-                <div>
-                    <TextInput
-                        onChange={onTextInputChange}
-                        placeholder="Type user name..."
-                    />
-                    <SortButtons onClick={onClick} />
-                </div>
+                <SortPanel
+                    onClick={onClick}
+                    onTextInputChange={onTextInputChange}
+                />
             </section>
             <UserCards users={filteredUsers} />
         </section>

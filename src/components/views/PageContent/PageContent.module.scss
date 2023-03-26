@@ -1,6 +1,11 @@
 .wrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 70vh;
+    margin-top: 24px;
+    
+    > section {
+        width: 100%;
+    }
 }
