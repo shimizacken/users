@@ -8,7 +8,7 @@ export const UserCard: React.FC<{name: string; company: string}> = ({
 }) => (
     <ClickableCard>
         <div className={styles.wrapper}>
-            <div>Name: {name}</div>
+            <div><He{name}</div>
             <div>Company: {company}</div>
         </div>
     </ClickableCard>
