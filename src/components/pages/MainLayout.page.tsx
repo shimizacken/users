@@ -2,6 +2,7 @@ import React from 'react';
 import {Header, Footer} from '../../packages/components';
 import {Link, Route, Routes} from 'react-router-dom';
 import {BackButtonContainer} from '../viewModels/BackButton.viewModel';
+import {Dashboard} from './Dashboard.page';
 
 export const MainLayout: React.FC = () => (
     <>
@@ -16,7 +17,7 @@ export const MainLayout: React.FC = () => (
         />
         <main>
             <Routes>
-                <Route path="/" element={<div>Users</div>} />
+                <Route path="/" element={<Dashboard />} />
                 <Route
                     index
                     path="user/:userId"
