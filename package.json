@@ -20,7 +20,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "scss-modules": "yarn typed-scss-modules --watch src"
+    "scss-modules": "yarn typed-scss-modules --watch src",
+    "cypress:open": "cypress open"
   },
   "eslintConfig": {
     "extends": [
