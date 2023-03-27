@@ -69,6 +69,7 @@ Features
 ### Testing
 -   [x] jest
 -   [x] cypress.io
+-   [x] Storybook
 ### CI/CD
 -   [x] Deployment via netlify
 
