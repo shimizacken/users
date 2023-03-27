@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {TextInput} from '../../../packages/components';
-import {SortBy} from '../../../types/types';
 import {GroupButton, GroupButtons} from '../GroupButtons/GroupButtons.view';
 import styles from './SortPanel.module.scss';
 
