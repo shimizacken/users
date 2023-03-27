@@ -50,7 +50,7 @@ yarn storybook
 -   [x] Back button
 -   [ ] Test coverage
     -   [x] jest
-    -   [ ] cypress.io
+    -   [x] cypress.io
 -   [ ] Translations
 -   [ ] Responsiveness
 -   [ ] Error handling
