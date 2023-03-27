@@ -49,12 +49,10 @@ export const UserCardsContainer: React.FC = () => {
 
     return (
         <section>
-            <section>
-                <SortPanel
-                    onClick={onClick}
-                    onTextInputChange={onTextInputChange}
-                />
-            </section>
+            <SortPanel
+                onClick={onClick}
+                onTextInputChange={onTextInputChange}
+            />
             <UserCards users={filteredUsers} />
         </section>
     );

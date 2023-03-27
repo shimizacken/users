@@ -59,7 +59,7 @@ Features
 - [x]   Sort `User Cards` by username, company name or city name
 - [x]   Navigate between `Users` into `User Details` page
     -   [x] Back button in `User Details` page
-- [ ]   Responsiveness
+- [x]   Responsiveness
 - [ ]   Error handling
 - [x]   Accessability
 - [ ]   Themes
