@@ -1,6 +1,8 @@
 .wrapper {
     display: flex;
     flex-wrap: wrap;
+    overflow-y: scroll;
+    margin-top: 24px;
 
     li {
         margin: 16px;
@@ -10,5 +12,6 @@
 @media screen and (max-width: 600px) {
     .wrapper {
         width: min-content;
+        height: 70vh;
     }
 }

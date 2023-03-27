@@ -6,6 +6,13 @@
     margin-top: 24px;
 }
 
+@media screen and (max-width: 600px) {
+    .wrapper {
+        padding: 16px;
+    }
+}
+
+
 .start {
     justify-content: flex-start;
 }
