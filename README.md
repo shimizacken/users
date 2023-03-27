@@ -45,23 +45,23 @@ yarn storybook
 
 ## To complete
 
-###   Features
-    -   [x] Filter `User Cards` via search textbox
-    -   [x] Sort `User Cards` by username, company name or city name
-    -   [x] Navigate between `Users` into `User Details` page
-        -   [x] Back button in `User Details` page
-    -   [ ] Responsiveness
-    -   [ ] Error handling
-    -   [ ] Accessability
-    -   [ ] Themes
-    -   [ ] Translations
+Features
+- [x]   Filter `User Cards` via search textbox
+- [x]   Sort `User Cards` by username, company name or city name
+- [x]   Navigate between `Users` into `User Details` page
+    -   [x] Back button in `User Details` page
+- [ ]   Responsiveness
+- [ ]   Error handling
+- [x]   Accessability
+- [ ]   Themes
+- [ ]   Translations
 ### Performance
-    - [ ] Throttle search box
+-   [ ] Throttle search box
 ### Testing
-    -   [x] jest
-    -   [x] cypress.io
+-   [x] jest
+-   [x] cypress.io
 ### CI/CD
-    -   [x] Deployment via netlify
+-   [x] Deployment via netlify
 
 ### License
 
