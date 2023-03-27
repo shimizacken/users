@@ -45,19 +45,23 @@ yarn storybook
 
 ## To complete
 
--   [x] Filter via search textbox
--   [x] Sort by username, company name or city name
--   [x] Back button
--   [ ] Test coverage
+###   Features
+    -   [x] Filter `User Cards` via search textbox
+    -   [x] Sort `User Cards` by username, company name or city name
+    -   [x] Navigate between `Users` into `User Details` page
+        -   [x] Back button in `User Details` page
+    -   [ ] Responsiveness
+    -   [ ] Error handling
+    -   [ ] Accessability
+    -   [ ] Themes
+    -   [ ] Translations
+### Performance
+    - [ ] Throttle search box
+### Testing
     -   [x] jest
-    -   [ ] cypress.io
--   [ ] Translations
--   [ ] Responsiveness
--   [ ] Error handling
--   [x] Deployment via netlify
-    -   [ ] CI/CD
--   [ ] Support themes
-    -   [ ] Shared common styles variables (need to complete)
+    -   [x] cypress.io
+### CI/CD
+    -   [x] Deployment via netlify
 
 ### License
 
