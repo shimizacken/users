@@ -37,9 +37,7 @@ export const UserCardsContainer: React.FC = () => {
         }
     };
 
-    const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-        const value = e.currentTarget.value;
-
+    const onClick = (value: string) => {
         if (value === SortBy.UserName) {
             setFilteredUsers(sortCards(SortBy.UserName, filteredUsers));
         } else if (value === SortBy.CompanyName) {

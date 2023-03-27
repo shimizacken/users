@@ -4,7 +4,7 @@ import {GroupButton, GroupButtons} from '../GroupButtons/GroupButtons.view';
 import styles from './SortPanel.module.scss';
 
 export const SortPanel: React.FC<{
-    onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+    onClick: (value: string) => void;
     onTextInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }> = ({onClick, onTextInputChange}) => {
     const [groupButtons, setGroupButtons] = useState<GroupButton[]>([
@@ -38,7 +38,7 @@ export const SortPanel: React.FC<{
             })
         );
 
-        onClick(e);
+        onClick(value);
     };
 
     return (
