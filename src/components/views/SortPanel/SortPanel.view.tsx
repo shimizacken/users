@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {TextInput} from '../../../packages/components';
-import {GroupButton, GroupButtons} from '../GroupButtons/GroupButtons.view';
+import {GroupButtons} from '../../../packages/components';
+import type {GroupButton} from '../../../packages/components';
 import styles from './SortPanel.module.scss';
 
 export const SortPanel: React.FC<{

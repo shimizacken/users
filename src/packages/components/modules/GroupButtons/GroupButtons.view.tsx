@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Text} from '../../../packages/components';
+import {Button, Text} from '../..';
 import styles from './GroupButtons.module.scss';
 
 export type GroupButton = {

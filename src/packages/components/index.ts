@@ -12,3 +12,5 @@ export {Footer} from './elements/Footer/Footer.view';
 
 // modules
 export {ClickableCard} from './modules/ClickableCard/ClickableCard.view';
+export {GroupButtons} from './modules/GroupButtons/GroupButtons.view';
+export type {GroupButton} from './modules/GroupButtons/GroupButtons.view';
