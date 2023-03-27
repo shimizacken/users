@@ -4,8 +4,16 @@
     align-items: flex-start;
     height: 70vh;
     margin-top: 24px;
-    
-    > section {
-        width: 100%;
-    }
+}
+
+.start {
+    justify-content: flex-start;
+}
+
+.center {
+    justify-content: center;
+}
+
+.end {
+    justify-content: flex-end;
 }

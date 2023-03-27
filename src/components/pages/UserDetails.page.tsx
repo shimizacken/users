@@ -3,7 +3,7 @@ import {UserDetailsContainer} from '../viewModels/UserDetails.viewModel';
 import {PageContent} from '../views/PageContent/PageContent.view';
 
 export const UserDetailsPage: React.FC = () => (
-    <PageContent>
+    <PageContent align="center">
         <UserDetailsContainer />
     </PageContent>
 );
