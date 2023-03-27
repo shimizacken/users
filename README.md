@@ -1,4 +1,4 @@
-# Users
+# Users app
 
 Users is a simple `React-TypeScript` web application for displaying filter and sort users.
 
