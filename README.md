@@ -14,20 +14,29 @@ Since the app is relatively small, so the the folder structure is flat. The code
 
 ## Usage
 
-For run the unit-tests of the application, run: and then:
-
-For running the app
+Running the app
 
 ```bash
 yarn start
 ```
 
-For running `storybook`
+Running `storybook`
 
 ```bash
 yarn storybook
 ```
 
+Running unit-tests
+
+```bash
+yarn test --watch
+```
+
+Running e2e tests
+
+```bash
+yarn cypress:open
+```
 
 ## Naming conventions
 
