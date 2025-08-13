@@ -1,8 +1,9 @@
-# Users app
+# Users
 
-Users is a simple `React-TypeScript` web application for displaying filter and sort users.
+**Users** is a simple **React + TypeScript** web application for displaying, filtering, and sorting user data.  
+It includes a **Storybook** setup for developing stateless `View` components in complete isolation, making it easy to design and test UI elements independently.
 
-It have `Storybook` for developing the stateless component (`Views`) isolatedly.
+This project was built as part of a job assignment.
 
 ## Demo
 
@@ -10,7 +11,13 @@ It have `Storybook` for developing the stateless component (`Views`) isolatedly.
 
 
 ## Architecture
-Since the app is relatively small, so the the folder structure is flat. The code split into layers such as components, hooks and utils. Components are split into stateless "dumb" components, that focuses on the design called `Views`, while the business logic and internal states are done in `ViewModel` component (`Containers`). Layout is done in the components that called `Page`.
+The application is relatively small, so the folder structure is kept flat for simplicity.  
+The code is organised into layers such as **components**, **hooks**, and **utils**.
+
+- **Components** are divided into:
+  - **`Views`** – stateless, “dumb” components focused purely on design and presentation.
+  - **`ViewModel` (`Containers`)** – components responsible for business logic and managing internal state.
+- **Pages** – high-level components that define the overall layout and structure of a view.
 
 ## Usage
 
